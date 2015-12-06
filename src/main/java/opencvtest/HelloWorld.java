@@ -1,8 +1,5 @@
-package net.petrikainulainen.gradle;
+package opencvtest;
 
-/**
- * @author Petri Kainulainen
- */
 public class HelloWorld {
 
     public static void main(String[] args) {
