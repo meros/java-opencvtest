@@ -3,8 +3,18 @@ apply plugin: 'application'
 
 mainClassName = "opencvtest.HelloWorld"
 
-jar {
-    manifest {
-        attributes 'Main-Class': 'opencvtest.HelloWorld'
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
     }
+}
+
+dependencies {
+    compile files('libs/opencv-300.jar')
+} 
+
+run {
+    jvmArgs = ['-Djava.library.path=/usr/local/Cellar/opencv3/3.0.0/share/OpenCV/java']
 }
